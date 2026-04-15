@@ -1,0 +1,16 @@
+diff --git a/cmake/external/leveldb.cmake b/cmake/external/leveldb.cmake
+index 920bf2928..c5c9cc7ee 100644
+--- a/cmake/external/leveldb.cmake
++++ b/cmake/external/leveldb.cmake
+@@ -24,7 +24,10 @@ if(TARGET leveldb)
+   return()
+ endif()
+ 
+-set(version 1.22)
++# This version must be kept in sync with cmake/external/leveldb.cmake
++# in the firebase-cpp-sdk. If this version ever changes then make sure
++# to update leveldb.cmake in the firebase-cpp-sdk accordingly.
++set(version 1.23)
+ 
+ ExternalProject_Get_property(snappy SOURCE_DIR)
+ set(snappy_source_dir "${SOURCE_DIR}")
