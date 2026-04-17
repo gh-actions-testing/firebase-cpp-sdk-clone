@@ -836,6 +836,7 @@ jobs:
     # name: test-desktop-${{ matrix.os }}-${{ matrix.arch }}-${{ matrix.ssl_variant }}
     name: test-desktop-foo
     # needs: [check_and_prepare, build_desktop]
+    needs: [check_and_prepare]
     # runs-on: ${{ matrix.os }}
     runs-on: ubuntu-24.04
     # if: contains(needs.check_and_prepare.outputs.matrix_platform, 'Desktop') && needs.check_and_prepare.outputs.apis != '' && !cancelled()
